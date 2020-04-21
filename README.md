@@ -1,6 +1,6 @@
 # RoboFriends
 
 #### Meet my robot friends in 3 easy steps :)
- * Clone the repo
- * npm install
- * npm start
+ 1. Clone the repo
+ 1. npm install
+ 1. npm start
