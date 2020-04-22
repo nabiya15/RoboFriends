@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import ErrorBoundry from './ErrorBoundry';
 import './App.css';
 //State is and object that describe the application. State is able to change(dynamic).
 //State is passed to the children components from the parent component. It is a PROP to the child component. PROPS are just values that cannot be changed.
@@ -39,7 +40,9 @@ class App extends Component {
 					<SearchBox searchChange={this.onSearchChange}/>
 					<br/>
 					<Scroll>
-						<CardList robots={filteredRobots}/>
+						<ErrorBoundry>
+							<CardList robots={filteredRobots}/>
+						</ErrorBoundry>
 					</Scroll>
 				</div>
 			);
